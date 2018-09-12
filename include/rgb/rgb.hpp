@@ -126,7 +126,7 @@ move_gain compute_single_gain(
     size_t n = doc->get().terms.size() / 4;
     size_t m = doc->get().terms.size() % 4;
 
-    for (size_t j = 0; j < n; j++) {
+    for (size_t j = 0; j < n * 4; j+=4) {
         auto q0 = doc->get().terms[j];
         auto q1 = doc->get().terms[j+1];
         auto q2 = doc->get().terms[j+2];
